@@ -8,7 +8,7 @@ export const people = [
   },
   {
     id: 2,
-    name: "Dr. Athar Farid",
+    name: "Dr. Hafiz Muhammad Athar Farid",
     designation: "Postdoctoral Researcher, Artificial Intelligence",
     email: "h.farid@hud.ac.uk",
     image: "/people/h.farid.jfif",
