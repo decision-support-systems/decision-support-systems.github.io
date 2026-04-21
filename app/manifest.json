@@ -1,6 +1,6 @@
 {
-  "name": "MyWebSite",
-  "short_name": "MySite",
+  "name": "DSS",
+  "short_name": "DSS",
   "icons": [
     {
       "src": "/web-app-manifest-192x192.png",
