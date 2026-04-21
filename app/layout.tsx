@@ -75,7 +75,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${manrope.variable} ${fraunces.variable} bg-white text-gray-900 font-sans`}>
+      <body className={`${manrope.variable} ${fraunces.variable} font-sans`}>
         <Header />
         <main>{children}</main>
         <Footer />

@@ -6,7 +6,7 @@ import SiteLogo from './SiteLogo';
 
 export default function Footer() {
   return (
-    <footer className="bg-[#1b2a2f] text-gray-100 py-14">
+    <footer className="bg-[var(--footer)] text-gray-100 py-14">
       <div className="container-custom">
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           <div>
@@ -36,7 +36,7 @@ export default function Footer() {
             <ul className="space-y-2 text-gray-300 text-sm">
               <li>
                 <a
-                  href="https://github.com/uoh-housing-and-ai"
+                  href="https://github.com/decision-support-systems"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-white transition-colors flex items-center gap-2"
@@ -51,7 +51,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-[#2f454c] pt-8 text-center text-gray-300 text-sm">
+        <div className="border-t border-[rgba(182,213,222,0.25)] pt-8 text-center text-gray-300 text-sm">
           <p className="flex items-center justify-center gap-2">
             <Copyright aria-hidden="true" className="h-4 w-4" />
             <span>{new Date().getFullYear()} <a href='https://www.hud.ac.uk/' className="hover:text-white transition-colors" target='_blank' rel='noopener noreferrer'>University of Huddersfield </a> 

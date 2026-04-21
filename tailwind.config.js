@@ -7,8 +7,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'primary': '#1e40af',
-        'secondary': '#7c3aed',
+        'primary': '#5f7386',
+        'secondary': '#cabed8',
       },
       fontFamily: {
         'sans': ['var(--font-manrope)', 'system-ui', 'sans-serif'],

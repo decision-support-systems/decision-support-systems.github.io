@@ -3,14 +3,21 @@
 @tailwind utilities;
 
 :root {
-  --bg: #f6f8f4;
-  --surface: #ffffff;
-  --ink: #1b2a2f;
-  --muted: #4c5f66;
-  --brand: #0b6e6e;
-  --brand-strong: #08585a;
-  --accent: #f2a65a;
-  --line: #d8e2df;
+  --bg: #f4f3f2;
+  --surface: #fcfcfb;
+  --ink: #28323d;
+  --muted: #5b6670;
+  --brand: #5f7386;
+  --brand-strong: #42586d;
+  --brand-soft: #b6d5de;
+  --mint: #bfd9ca;
+  --sage: #c0d1bc;
+  --peach: #f0c8b6;
+  --rose: #e7cdd5;
+  --lilac: #cabed8;
+  --gold: #e6c680;
+  --line: #d3dce0;
+  --footer: #27313b;
 }
 
 @layer base {
@@ -21,8 +28,9 @@
   body {
     @apply antialiased;
     background:
-      radial-gradient(80rem 45rem at 8% -10%, #d9efef 0%, transparent 60%),
-      radial-gradient(65rem 45rem at 92% 0%, #fbe8d3 0%, transparent 56%),
+      radial-gradient(70rem 42rem at 8% -12%, rgba(182, 213, 222, 0.55) 0%, transparent 62%),
+      radial-gradient(70rem 44rem at 94% -8%, rgba(231, 205, 213, 0.46) 0%, transparent 58%),
+      radial-gradient(65rem 40rem at 40% 105%, rgba(230, 198, 128, 0.28) 0%, transparent 58%),
       var(--bg);
     color: var(--ink);
   }
@@ -51,26 +59,26 @@
 
   .btn-primary {
     @apply inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold text-white transition-all duration-300;
-    background: linear-gradient(135deg, var(--brand) 0%, #0a7f80 100%);
-    box-shadow: 0 8px 20px rgba(11, 110, 110, 0.18);
+    background: linear-gradient(135deg, var(--brand-strong) 0%, var(--brand) 62%, #7f8ea8 100%);
+    box-shadow: 0 10px 24px rgba(66, 88, 109, 0.24);
   }
 
   .btn-primary:hover {
     transform: translateY(-1px);
-    box-shadow: 0 12px 26px rgba(11, 110, 110, 0.22);
-    background: linear-gradient(135deg, var(--brand-strong) 0%, #0b6e6e 100%);
+    box-shadow: 0 14px 30px rgba(66, 88, 109, 0.28);
+    background: linear-gradient(135deg, #394d61 0%, var(--brand-strong) 58%, var(--brand) 100%);
   }
 
   .btn-secondary {
     @apply inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold transition-colors duration-300;
     color: var(--ink);
-    background: rgba(255, 255, 255, 0.86);
+    background: rgba(252, 252, 251, 0.9);
     border: 1px solid var(--line);
   }
 
   .btn-secondary:hover {
     background: #ffffff;
-    border-color: #c4d4d0;
+    border-color: #b5c4cc;
   }
 
   .section-title {
@@ -90,10 +98,22 @@
   }
 
   .glass-card {
-    background: rgba(255, 255, 255, 0.9);
-    border: 1px solid rgba(209, 222, 218, 0.95);
-    box-shadow: 0 14px 40px rgba(26, 47, 54, 0.08);
+    background: rgba(252, 252, 251, 0.9);
+    border: 1px solid rgba(211, 220, 224, 0.95);
+    box-shadow: 0 16px 40px rgba(39, 49, 59, 0.1);
     backdrop-filter: blur(6px);
+  }
+
+  .panel-mint {
+    background: linear-gradient(140deg, rgba(191, 217, 202, 0.38), rgba(182, 213, 222, 0.28));
+  }
+
+  .panel-peach {
+    background: linear-gradient(140deg, rgba(240, 200, 182, 0.4), rgba(230, 198, 128, 0.2));
+  }
+
+  .panel-lilac {
+    background: linear-gradient(140deg, rgba(202, 190, 216, 0.38), rgba(231, 205, 213, 0.24));
   }
 
   .float-up {

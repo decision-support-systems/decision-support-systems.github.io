@@ -29,15 +29,15 @@ export default function Projects({ preview = false, domainId }: ProjectsProps) {
               key={project.id}
               className="glass-card rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-1"
             >
-              <div className="h-40 bg-gradient-to-br from-[#e7f4f2] via-[#f7f9f7] to-[#fdf0e2] flex items-center justify-center border-b border-[#e2ece8]">
-                <div className="text-[#4f656b] text-sm font-semibold text-center px-6">{project.imageLabel}</div>
+              <div className="h-40 bg-gradient-to-br from-[rgba(182,213,222,0.42)] via-[rgba(252,252,251,0.94)] to-[rgba(231,205,213,0.36)] flex items-center justify-center border-b border-[var(--line)]">
+                <div className="text-[var(--muted)] text-sm font-semibold text-center px-6">{project.imageLabel}</div>
               </div>
 
               <div className="p-6">
-                <h3 className="text-xl font-bold text-[#1b2a2f] mb-2">{project.title}</h3>
-                <p className="text-[#4c5f66] mb-4 leading-relaxed">{project.description}</p>
+                <h3 className="text-xl font-bold text-[var(--ink)] mb-2">{project.title}</h3>
+                <p className="text-[var(--muted)] mb-4 leading-relaxed">{project.description}</p>
 
-                <p className="mb-4 text-xs font-semibold uppercase tracking-[0.16em] text-[#0b6e6e]">
+                <p className="mb-4 text-xs font-semibold uppercase tracking-[0.16em] text-[var(--brand-strong)]">
                   Domain: {getDomainById(project.domainId)?.title || 'Unassigned'}
                 </p>
 
@@ -45,7 +45,7 @@ export default function Projects({ preview = false, domainId }: ProjectsProps) {
                   {project.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="inline-block rounded-full bg-[#eef4f5] px-3 py-1 text-xs font-semibold uppercase tracking-[0.08em] text-[#365058]"
+                      className="inline-block rounded-full bg-[rgba(191,217,202,0.34)] px-3 py-1 text-xs font-semibold uppercase tracking-[0.08em] text-[var(--ink)]"
                     >
                       {tag}
                     </span>
@@ -63,7 +63,7 @@ export default function Projects({ preview = false, domainId }: ProjectsProps) {
                     <ExternalLink aria-hidden="true" className="h-4 w-4" />
                   </a>
                 ) : (
-                  <p className="text-sm font-medium text-[#6a7c82]">Project profile available on request.</p>
+                  <p className="text-sm font-medium text-[var(--muted)]">Project profile available on request.</p>
                 )}
               </div>
             </div>

@@ -13,7 +13,7 @@ export default function Domains({ preview = false }: DomainsProps) {
   const visibleDomains = preview ? domains.slice(0, 3) : domains;
 
   return (
-    <section id="domains" className="py-14 md:py-16 bg-[#eef5f6]">
+    <section id="domains" className="py-14 md:py-16 bg-[rgba(191,217,202,0.2)]">
       <div className="container-custom">
         <p className="section-kicker">Decision Domains</p>
         <h2 className="section-title">Domain Areas</h2>
@@ -31,14 +31,14 @@ export default function Domains({ preview = false }: DomainsProps) {
                 key={domain.id}
                 className="glass-card rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1"
               >
-                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#0b6e6e]">{domain.title}</p>
-                <p className="mt-3 text-[#425860] leading-relaxed">{domain.shortDescription}</p>
+                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--brand-strong)]">{domain.title}</p>
+                <p className="mt-3 text-[var(--muted)] leading-relaxed">{domain.shortDescription}</p>
 
                 <div className="mt-5 flex flex-wrap gap-2">
-                  <span className="rounded-full bg-[#e8f1f2] px-3 py-1 text-xs font-semibold text-[#35515a]">
+                  <span className="rounded-full bg-[rgba(182,213,222,0.38)] px-3 py-1 text-xs font-semibold text-[var(--brand-strong)]">
                     {projectCount} project{projectCount === 1 ? '' : 's'}
                   </span>
-                  <span className="rounded-full bg-[#fdf1e3] px-3 py-1 text-xs font-semibold text-[#6b4e2a]">
+                  <span className="rounded-full bg-[rgba(240,200,182,0.45)] px-3 py-1 text-xs font-semibold text-[var(--ink)]">
                     {publicationCount} output{publicationCount === 1 ? '' : 's'}
                   </span>
                 </div>

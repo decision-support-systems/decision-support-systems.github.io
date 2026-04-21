@@ -34,16 +34,16 @@ export default function People({ preview = false, eagerImages = false }: PeopleP
                   alt={`${person.name} profile photo`}
                   width={56}
                   height={56}
-                  className="h-14 w-14 rounded-full border border-[#d5e2dd] object-cover"
+                  className="h-14 w-14 rounded-full border border-[var(--line)] object-cover"
                   loading={eagerImages ? 'eager' : 'lazy'}
                   priority={eagerImages && index < 3}
                 />
                 <div>
-                  <h3 className="text-base font-semibold text-[#1b2a2f]">{person.name}</h3>
-                  <p className="text-sm text-[#4c5f66]">{person.designation}</p>
+                  <h3 className="text-base font-semibold text-[var(--ink)]">{person.name}</h3>
+                  <p className="text-sm text-[var(--muted)]">{person.designation}</p>
                   <a
                     href={`mailto:${person.email}`}
-                    className="mt-1 inline-flex items-center gap-2 text-sm font-medium text-[#0b6e6e] hover:underline"
+                    className="mt-1 inline-flex items-center gap-2 text-sm font-medium text-[var(--brand-strong)] hover:underline"
                   >
                     <Mail aria-hidden="true" className="h-4 w-4" />
                     <span>{person.email}</span>

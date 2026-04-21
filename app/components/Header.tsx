@@ -61,23 +61,23 @@ export default function Header() {
   };
 
   return (
-    <header className="sticky top-0 z-50 border-b border-[#d9e4e1] bg-white/80 backdrop-blur-md">
+    <header className="sticky top-0 z-50 border-b border-[var(--line)] bg-[rgba(252,252,251,0.84)] backdrop-blur-md">
       <nav className="container-custom py-4">
         <div className="flex items-center justify-between gap-4">
           <div className="flex items-center gap-3 float-up">
             <SiteLogo size={44} />
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#0b6e6e]">University of Huddersfield</p>
-              <p className="text-lg md:text-xl font-display font-semibold text-[#1b2a2f]">Decision Support Systems</p>
+              <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[var(--brand-strong)]">University of Huddersfield</p>
+              <p className="text-lg md:text-xl font-display font-semibold text-[var(--ink)]">Decision Support Systems</p>
             </div>
           </div>
 
-          <div className="hidden md:flex items-center gap-6 text-sm font-medium text-[#2f464d]">
+          <div className="hidden md:flex items-center gap-6 text-sm font-medium text-[var(--muted)]">
             {menuItems.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
-                className={`transition-colors hover:text-[#0b6e6e] ${isItemActive(item.href) ? 'text-[#0b6e6e] font-bold' : ''}`}
+                className={`transition-colors hover:text-[var(--brand-strong)] ${isItemActive(item.href) ? 'text-[var(--brand-strong)] font-bold' : ''}`}
               >
                 {item.name}
               </Link>
@@ -89,7 +89,7 @@ export default function Header() {
             onClick={() => setIsMobileMenuOpen((prev) => !prev)}
             aria-label="Toggle menu"
             aria-expanded={isMobileMenuOpen}
-            className="md:hidden inline-flex h-10 w-10 items-center justify-center rounded-lg border border-[#d3dfdb] bg-white text-[#365058]"
+            className="md:hidden inline-flex h-10 w-10 items-center justify-center rounded-lg border border-[var(--line)] bg-[var(--surface)] text-[var(--muted)]"
           >
             {isMobileMenuOpen ? <X className="h-5 w-5" aria-hidden="true" /> : <Menu className="h-5 w-5" aria-hidden="true" />}
           </button>
@@ -105,13 +105,13 @@ export default function Header() {
         </div>
 
         {isMobileMenuOpen ? (
-          <div className="mt-4 md:hidden rounded-2xl border border-[#d3dfdb] bg-white p-3 shadow-sm">
+          <div className="mt-4 md:hidden rounded-2xl border border-[var(--line)] bg-[var(--surface)] p-3 shadow-sm">
             <div className="flex flex-col gap-1">
               {menuItems.map((item) => (
                 <Link
                   key={item.name}
                   href={item.href}
-                  className={`rounded-lg px-3 py-2 text-sm font-medium transition-colors ${isItemActive(item.href) ? 'bg-[#e9f3f3] text-[#0b6e6e]' : 'text-[#365058] hover:bg-[#f3f8f7]'}`}
+                  className={`rounded-lg px-3 py-2 text-sm font-medium transition-colors ${isItemActive(item.href) ? 'bg-[rgba(182,213,222,0.34)] text-[var(--brand-strong)]' : 'text-[var(--muted)] hover:bg-[rgba(191,217,202,0.3)]'}`}
                 >
                   {item.name}
                 </Link>

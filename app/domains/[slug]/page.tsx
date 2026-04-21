@@ -146,45 +146,45 @@ export default function DomainPage({ params }: DomainPageProps) {
           <h1 className="section-title">{domain.title}</h1>
           <p className="section-subtitle">{domain.longDescription}</p>
 
-          <div className="mb-8 rounded-2xl border border-[#d9e6e2] bg-[#f5faf8] p-5">
-            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#0b6e6e]">At a glance</p>
-            <p className="mt-2 text-[#365058] leading-relaxed">
+          <div className="mb-8 rounded-2xl border border-[var(--line)] bg-[rgba(191,217,202,0.22)] p-5">
+            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[var(--brand-strong)]">At a glance</p>
+            <p className="mt-2 text-[var(--muted)] leading-relaxed">
               This domain currently features {domainProjects.length} project{domainProjects.length === 1 ? '' : 's'} and {domainPublications.length} research output{domainPublications.length === 1 ? '' : 's'}, giving a clear view of active delivery and supporting evidence.
             </p>
           </div>
 
           <div className="grid gap-8 lg:grid-cols-2">
             <div>
-              <h2 className="text-2xl font-bold text-[#1b2a2f] mb-4">Projects</h2>
+              <h2 className="text-2xl font-bold text-[var(--ink)] mb-4">Projects</h2>
               {domainProjects.length ? (
                 <div className="space-y-4">
                   {domainProjects.map((project) => (
                     <article key={project.id} className="glass-card rounded-2xl p-5">
-                      <h3 className="text-lg font-semibold text-[#1b2a2f]">{project.title}</h3>
-                      <p className="mt-2 text-[#4c5f66] leading-relaxed">{project.description}</p>
+                      <h3 className="text-lg font-semibold text-[var(--ink)]">{project.title}</h3>
+                      <p className="mt-2 text-[var(--muted)] leading-relaxed">{project.description}</p>
                     </article>
                   ))}
                 </div>
               ) : (
-                <p className="text-[#4c5f66]">No projects published for this domain yet.</p>
+                <p className="text-[var(--muted)]">No projects published for this domain yet.</p>
               )}
             </div>
 
             <div>
-              <h2 className="text-2xl font-bold text-[#1b2a2f] mb-4">Research Outputs</h2>
+              <h2 className="text-2xl font-bold text-[var(--ink)] mb-4">Research Outputs</h2>
               {domainPublications.length ? (
                 <div className="space-y-4">
                   {domainPublications.map((publication) => (
-                    <article key={publication.id} className="rounded-2xl border-l-4 border-[#0b6e6e] bg-white px-6 py-5 shadow-sm">
-                      <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#0b6e6e]">{publication.type}</p>
-                      <h3 className="text-lg font-semibold text-[#1b2a2f] mt-2">{publication.title}</h3>
-                      <p className="text-[#4c5f66] mt-2 leading-relaxed">{publication.summary}</p>
-                      <p className="text-[#6a7c82] italic mt-2">{publication.venue}</p>
+                    <article key={publication.id} className="rounded-2xl border-l-4 border-[var(--brand)] bg-[var(--surface)] px-6 py-5 shadow-sm">
+                      <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[var(--brand-strong)]">{publication.type}</p>
+                      <h3 className="text-lg font-semibold text-[var(--ink)] mt-2">{publication.title}</h3>
+                      <p className="text-[var(--muted)] mt-2 leading-relaxed">{publication.summary}</p>
+                      <p className="text-[var(--muted)] italic mt-2">{publication.venue}</p>
                     </article>
                   ))}
                 </div>
               ) : (
-                <p className="text-[#4c5f66]">No publications published for this domain yet.</p>
+                <p className="text-[var(--muted)]">No publications published for this domain yet.</p>
               )}
             </div>
           </div>
