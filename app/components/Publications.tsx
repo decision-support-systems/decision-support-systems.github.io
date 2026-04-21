@@ -1,15 +1,18 @@
 'use client';
 
 import { publications } from '@/data/publications';
+import { getDomainById } from '@/data/domains';
 import { ExternalLink } from 'lucide-react';
 import Link from 'next/link';
 
 type PublicationsProps = {
   preview?: boolean;
+  domainId?: number;
 };
 
-export default function Publications({ preview = false }: PublicationsProps) {
-  const visiblePublications = preview ? publications.slice(0, 2) : publications;
+export default function Publications({ preview = false, domainId }: PublicationsProps) {
+  const filteredPublications = domainId ? publications.filter((publication) => publication.domainId === domainId) : publications;
+  const visiblePublications = preview ? filteredPublications.slice(0, 2) : filteredPublications;
 
   return (
     <section id="outputs" className="py-14 md:py-16 bg-[#f3f7f6]">
@@ -17,7 +20,7 @@ export default function Publications({ preview = false }: PublicationsProps) {
         <p className="section-kicker">Evidence & Research</p>
         <h2 className="section-title">Research Outputs</h2>
         <p className="section-subtitle">
-          Publications, implementation notes, and evaluative outputs that translate technical AI work into practical housing decisions.
+          Publications, implementation findings, and evaluative outputs that translate technical AI work into practical decisions for real-world domain teams.
         </p>
 
         <div className="space-y-6 max-w-4xl">
@@ -33,6 +36,9 @@ export default function Publications({ preview = false }: PublicationsProps) {
                 <span className="text-[#708287]"> ({pub.year})</span>
               </p> */}
               <p className="text-[#4c5f66] mt-2 leading-relaxed">{pub.summary}</p>
+              <p className="mt-2 text-xs font-semibold uppercase tracking-[0.16em] text-[#0b6e6e]">
+                Domain: {getDomainById(pub.domainId)?.title || 'Unassigned'}
+              </p>
               <p className="text-[#6a7c82] italic mt-2">{pub.venue}</p>
               {pub.link ? (
                 <a
@@ -49,7 +55,7 @@ export default function Publications({ preview = false }: PublicationsProps) {
           ))}
         </div>
 
-        {preview && visiblePublications.length > 2 ? (
+        {preview && filteredPublications.length > visiblePublications.length ? (
           <div className="mt-8">
             <Link href="/outputs" className="btn-secondary">View All Outputs</Link>
           </div>

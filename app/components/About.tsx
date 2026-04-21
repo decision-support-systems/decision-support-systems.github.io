@@ -12,10 +12,10 @@ export default function About() {
           <div>
             <h3 className="text-2xl font-semibold mb-4 text-gray-900">What this site represents</h3>
             <p className="text-gray-700 text-lg leading-relaxed mb-4">
-              This is a landing page for University of Huddersfield work at the intersection of housing and artificial intelligence. It brings together applied research, technical prototypes, and delivery-focused projects created with housing groups and sector partners.
+              This is a landing page for University of Huddersfield work on decision support systems and applied AI. It brings together domain-focused research, technical prototypes, and delivery-oriented projects with public and private sector partners.
             </p>
             <p className="text-gray-700 text-lg leading-relaxed">
-              The emphasis is practical: building models, testing generative AI, orchestrating agentic workflows, analysing housing data, and turning complex evidence into usable informatics and visualisations.
+              The emphasis is practical: building models, testing generative AI, orchestrating agentic workflows, analysing operational data, and turning complex evidence into usable informatics and visualisations.
             </p>
           </div>
 
@@ -23,12 +23,12 @@ export default function About() {
             <h3 className="text-2xl font-semibold mb-4 text-gray-900">Focus areas</h3>
             <ul className="space-y-3">
               {[
-                'Machine learning models for housing demand, risk, and service outcomes',
+                'Machine learning models for risk, prioritisation, and service outcomes',
                 'Generative AI tools for communication, triage, and knowledge support',
-                'AI agents that automate research, workflow, and reporting tasks',
-                'Data analysis for housing providers, place-based studies, and operational insight',
-                'Housing informatics, linked information, and evidence-rich dashboards',
-                'Interactive visualisations that make complex housing data easier to act on',
+                'Agentic workflows that automate research, operations, and reporting tasks',
+                'Data analysis for domain teams, place-based studies, and operational insight',
+                'Decision informatics, linked information, and evidence-rich dashboards',
+                'Interactive visualisations that make complex data easier to act on',
               ].map((item, idx) => (
                 <li key={idx} className="flex items-start gap-3">
                   <ChevronRight

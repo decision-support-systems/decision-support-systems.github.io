@@ -12,10 +12,10 @@ export default function Footer() {
           <div>
             <div className="flex items-center space-x-2 mb-4">
               <SiteLogo size={34} className="rounded-lg" />
-              <span className="font-bold text-lg">UoH Housing and AI</span>
+              <span className="font-bold text-lg">UoH Decision Support Systems</span>
             </div>
             <p className="text-gray-300 text-sm leading-relaxed">
-              University of Huddersfield work spanning machine learning, generative AI, agents, analytics, informatics, and visualisation for housing contexts.
+              University of Huddersfield work spanning machine learning, generative AI, agents, analytics, informatics, and visualisation for domain-focused decision contexts.
             </p>
           </div>
 
@@ -24,6 +24,7 @@ export default function Footer() {
             <ul className="space-y-2 text-gray-300 text-sm">
               <li><Link href="/" className="hover:text-white transition-colors">Home</Link></li>
               <li><Link href="/#about" className="hover:text-white transition-colors">About</Link></li>
+              <li><Link href="/domains" className="hover:text-white transition-colors">Domains</Link></li>
               <li><Link href="/projects" className="hover:text-white transition-colors">Projects</Link></li>
               <li><Link href="/outputs" className="hover:text-white transition-colors">Outputs</Link></li>
               <li><Link href="/people" className="hover:text-white transition-colors">People</Link></li>
@@ -54,7 +55,7 @@ export default function Footer() {
           <p className="flex items-center justify-center gap-2">
             <Copyright aria-hidden="true" className="h-4 w-4" />
             <span>{new Date().getFullYear()} <a href='https://www.hud.ac.uk/' className="hover:text-white transition-colors" target='_blank' rel='noopener noreferrer'>University of Huddersfield </a> 
-              Housing and AI showcase.</span>
+              Decision Support Systems showcase.</span>
           </p>
         </div>
       </div>

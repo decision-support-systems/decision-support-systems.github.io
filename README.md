@@ -61,7 +61,7 @@ All content is data-driven and easy to update:
 
 This site is deployed to GitHub Pages. Push to `main` branch to trigger automatic deployment.
 
-**Site URL**: https://uoh-housing-and-ai.github.io
+**Site URL**: https://decision-support-systems.github.io
 
 For GitHub Actions setup, see [SETUP.md](SETUP.md#github-actions-recommended)
 

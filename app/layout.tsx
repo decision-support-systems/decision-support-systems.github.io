@@ -3,6 +3,7 @@ import { Fraunces, Manrope } from 'next/font/google';
 import './globals.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import { SITE_DESCRIPTION, SITE_NAME, SITE_SHORT_NAME, absoluteUrl, getSiteUrl } from './lib/seo';
 
 const manrope = Manrope({
   subsets: ['latin'],
@@ -20,9 +21,51 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: 'University of Huddersfield | Housing and AI',
-  description: 'A showcase of University of Huddersfield work applying machine learning, generative AI, AI agents, data analysis, informatics, and visualisation to housing challenges.',
-  applicationName: 'UoH Housing and AI Showcase',
+  metadataBase: new URL(getSiteUrl()),
+  title: {
+    default: SITE_NAME,
+    template: '%s | UoH Decision Support Systems',
+  },
+  description: SITE_DESCRIPTION,
+  applicationName: SITE_SHORT_NAME,
+  alternates: {
+    canonical: '/',
+  },
+  keywords: [
+    'Decision support systems',
+    'University of Huddersfield',
+    'Applied AI research',
+    'Machine learning projects',
+    'Decision informatics',
+    'Generative AI',
+    'Housing analytics',
+    'Research outputs',
+  ],
+  openGraph: {
+    title: SITE_NAME,
+    description: SITE_DESCRIPTION,
+    url: absoluteUrl('/'),
+    siteName: SITE_SHORT_NAME,
+    type: 'website',
+    locale: 'en_GB',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: SITE_NAME,
+    description: SITE_DESCRIPTION,
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+      'max-video-preview': -1,
+    },
+  },
+  category: 'research',
 };
 
 export default function RootLayout({

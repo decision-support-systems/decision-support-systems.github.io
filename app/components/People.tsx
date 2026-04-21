@@ -19,7 +19,7 @@ export default function People({ preview = false, eagerImages = false }: PeopleP
         <p className="section-kicker">Team and People</p>
         <h2 className="section-title">People Involved</h2>
         <p className="section-subtitle">
-          A friendly cross-disciplinary team combining housing expertise, technical design, and AI delivery experience.
+          A cross-disciplinary team bringing together domain knowledge, technical design, and applied AI delivery experience.
         </p>
 
         <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">

@@ -1,15 +1,18 @@
 'use client';
 
 import { projects } from '@/data/projects';
+import { getDomainById } from '@/data/domains';
 import { ExternalLink } from 'lucide-react';
 import Link from 'next/link';
 
 type ProjectsProps = {
   preview?: boolean;
+  domainId?: number;
 };
 
-export default function Projects({ preview = false }: ProjectsProps) {
-  const visibleProjects = preview ? projects.slice(0, 2) : projects;
+export default function Projects({ preview = false, domainId }: ProjectsProps) {
+  const filteredProjects = domainId ? projects.filter((project) => project.domainId === domainId) : projects;
+  const visibleProjects = preview ? filteredProjects.slice(0, 2) : filteredProjects;
 
   return (
     <section id="projects" className="py-14 md:py-16">
@@ -17,7 +20,7 @@ export default function Projects({ preview = false }: ProjectsProps) {
         <p className="section-kicker">Applied Delivery</p>
         <h2 className="section-title">Projects And Prototypes</h2>
         <p className="section-subtitle">
-          Practical tools, technical pilots, and research-informed builds created to improve housing insight, communication, and decision support.
+          Discover practical tools, technical pilots, and research-informed builds designed to strengthen domain insight, improve communication, and support better operational decisions.
         </p>
 
         <div className="grid md:grid-cols-2 gap-8">
@@ -33,6 +36,10 @@ export default function Projects({ preview = false }: ProjectsProps) {
               <div className="p-6">
                 <h3 className="text-xl font-bold text-[#1b2a2f] mb-2">{project.title}</h3>
                 <p className="text-[#4c5f66] mb-4 leading-relaxed">{project.description}</p>
+
+                <p className="mb-4 text-xs font-semibold uppercase tracking-[0.16em] text-[#0b6e6e]">
+                  Domain: {getDomainById(project.domainId)?.title || 'Unassigned'}
+                </p>
 
                 <div className="flex gap-2 mb-4 flex-wrap">
                   {project.tags.map((tag) => (
@@ -63,7 +70,7 @@ export default function Projects({ preview = false }: ProjectsProps) {
           ))}
         </div>
 
-        {preview && visibleProjects.length > 2 ? (
+        {preview && filteredProjects.length > visibleProjects.length ? (
           <div className="mt-8">
             <Link href="/projects" className="btn-secondary">View All Projects</Link>
           </div>

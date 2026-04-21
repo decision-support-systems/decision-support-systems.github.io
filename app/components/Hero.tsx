@@ -14,18 +14,18 @@ export default function Hero() {
         <div className="grid items-center gap-10 lg:grid-cols-[1.1fr_0.9fr]">
           <div className="float-up">
             <p className="mb-4 inline-flex rounded-full border border-[#cfded9] bg-white/80 px-4 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-[#0b6e6e]">
-              University of Huddersfield Showcase
+              University of Huddersfield Decision Intelligence Hub
             </p>
             <h1 className="font-display text-5xl leading-tight text-[#1b2a2f] md:text-6xl lg:text-7xl">
-              Housing and AI
-              <span className="block text-[#0b6e6e]">in practice</span>
+              Decision Support
+              <span className="block text-[#0b6e6e]">Systems in practice</span>
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-relaxed text-[#425860] md:text-xl">
-              Explore how machine learning, generative AI, agentic systems, and data storytelling are being applied to real housing challenges through research-led prototypes and partner-facing delivery.
+              Explore how machine learning, generative AI, agentic systems, and data storytelling are applied to real-world decisions across domains through research-led prototypes and partner-facing delivery.
             </p>
 
             <div className="mt-10 flex flex-wrap gap-4">
-              <Link href="/projects" className="btn-primary">Explore Projects</Link>
+              <Link href="/domains" className="btn-primary">Explore Domains</Link>
               <Link href="/outputs" className="btn-secondary">See Outputs</Link>
               <Link href="/people" className="btn-secondary">Meet The Team</Link>
             </div>
@@ -35,8 +35,8 @@ export default function Hero() {
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#0b6e6e]">What this hub offers</p>
             <div className="mt-5 space-y-4">
               <div className="rounded-2xl bg-[#f3f8f7] p-4">
-                <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#1b2a2f]">Applied Projects</p>
-                <p className="mt-2 text-sm text-[#4c5f66]">Practical prototypes and delivery-focused builds for housing use cases.</p>
+                <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#1b2a2f]">Domain-Led Projects</p>
+                <p className="mt-2 text-sm text-[#4c5f66]">Practical prototypes and delivery-focused builds mapped to specific decision domains.</p>
               </div>
               <div className="rounded-2xl bg-[#fdf4ea] p-4">
                 <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#1b2a2f]">Research Outputs</p>

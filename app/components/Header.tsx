@@ -9,6 +9,7 @@ import SiteLogo from './SiteLogo';
 const menuItems = [
   { name: 'Home', href: '/' },
   { name: 'About', href: '/#about' },
+  { name: 'Domains', href: '/domains' },
   { name: 'Projects', href: '/projects' },
   { name: 'Outputs', href: '/outputs' },
   { name: 'People', href: '/people' },
@@ -67,7 +68,7 @@ export default function Header() {
             <SiteLogo size={44} />
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#0b6e6e]">University of Huddersfield</p>
-              <p className="text-lg md:text-xl font-display font-semibold text-[#1b2a2f]">Housing and AI</p>
+              <p className="text-lg md:text-xl font-display font-semibold text-[#1b2a2f]">Decision Support Systems</p>
             </div>
           </div>
 
@@ -76,7 +77,7 @@ export default function Header() {
               <Link
                 key={item.name}
                 href={item.href}
-                className={`transition-colors hover:text-[#0b6e6e] ${isItemActive(item.href) ? 'text-[#0b6e6e]' : ''}`}
+                className={`transition-colors hover:text-[#0b6e6e] ${isItemActive(item.href) ? 'text-[#0b6e6e] font-bold' : ''}`}
               >
                 {item.name}
               </Link>
@@ -94,7 +95,7 @@ export default function Header() {
           </button>
 
           <a
-            href="https://github.com/uoh-housing-and-ai"
+            href="https://github.com/decision-support-systems"
             target="_blank"
             rel="noopener noreferrer"
             className="hidden md:inline-flex btn-primary float-up delay-1"
@@ -116,7 +117,7 @@ export default function Header() {
                 </Link>
               ))}
               <a
-                href="https://github.com/uoh-housing-and-ai"
+                href="https://github.com/decision-support-systems"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-2 btn-primary"

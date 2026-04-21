@@ -1,6 +1,7 @@
 export const publications = [
   {
     id: 1,
+    domainId: 2,
     type: "Research & Development",
     title: "An expert-driven digital platform for decision support in sustainable building retrofitting",
     // authors: "University of Huddersfield Housing and AI contributors",

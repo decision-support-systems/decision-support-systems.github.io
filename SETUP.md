@@ -80,7 +80,7 @@ In your GitHub repository:
 3. Select Branch: `gh-pages` / `root`
 4. Save
 
-Your site will be available at: `https://uoh-housing-and-ai.github.io`
+Your site will be available at: `https://decision-support-systems.github.io`
 
 ## Project Structure
 

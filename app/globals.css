@@ -85,7 +85,7 @@
   }
 
   .section-subtitle {
-    @apply text-base md:text-lg mb-8 max-w-3xl;
+    @apply text-base md:text-lg mb-8;
     color: var(--muted);
   }
 
