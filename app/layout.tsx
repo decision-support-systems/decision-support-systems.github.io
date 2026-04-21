@@ -3,6 +3,7 @@ import { Fraunces, Manrope } from 'next/font/google';
 import './globals.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import ScrollCompassBackground from './components/ScrollCompassBackground';
 import { SITE_DESCRIPTION, SITE_NAME, SITE_SHORT_NAME, absoluteUrl, getSiteUrl } from './lib/seo';
 
 const manrope = Manrope({
@@ -76,9 +77,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${manrope.variable} ${fraunces.variable} font-sans`}>
-        <Header />
-        <main>{children}</main>
-        <Footer />
+        <ScrollCompassBackground />
+        <div className="relative z-10">
+          <Header />
+          <main>{children}</main>
+          <Footer />
+        </div>
       </body>
     </html>
   );
