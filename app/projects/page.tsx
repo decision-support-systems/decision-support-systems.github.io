@@ -51,7 +51,7 @@ export default function ProjectsPage() {
             name: project.title,
             description: project.description,
             url: absoluteUrl('/projects'),
-            about: getDomainById(project.domainId)?.title || 'Decision support systems',
+            about: getDomainById(project.domainId)?.title || 'AI with Decision Support Systems',
             keywords: project.tags.join(', '),
           },
         })),

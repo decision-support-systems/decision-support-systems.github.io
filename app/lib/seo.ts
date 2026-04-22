@@ -1,7 +1,7 @@
 const FALLBACK_SITE_URL = 'https://decision-support-systems.github.io';
 
-export const SITE_NAME = 'University of Huddersfield | Decision Support Systems';
-export const SITE_SHORT_NAME = 'UoH Decision Support Systems';
+export const SITE_NAME = 'University of Huddersfield | AI with Decision Support Systems';
+export const SITE_SHORT_NAME = 'UoH AI with Decision Support Systems';
 export const SITE_DESCRIPTION =
   'Discover how the University of Huddersfield applies AI, machine learning, data analysis, and decision informatics to practical domain challenges through research-led projects and outputs.';
 

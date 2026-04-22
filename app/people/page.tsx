@@ -6,7 +6,7 @@ import { absoluteUrl } from '../lib/seo';
 export const metadata: Metadata = {
   title: 'People and Expertise',
   description:
-    'Meet the researchers and practitioners behind University of Huddersfield decision support systems work in AI, analytics, and decision informatics.',
+    'Meet the researchers and practitioners behind University of Huddersfield AI with Decision Support Systems work in AI, analytics, and decision informatics.',
   alternates: {
     canonical: '/people',
   },
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     'research capability directory',
   ],
   openGraph: {
-    title: 'People Behind Decision Support Systems',
+    title: 'People Behind AI with Decision Support Systems',
     description:
       'A cross-disciplinary team delivering research, prototypes, and practical decision intelligence solutions.',
     url: absoluteUrl('/people'),
@@ -35,7 +35,7 @@ export default function PeoplePage() {
         url: absoluteUrl('/people'),
         name: 'People and Expertise',
         description:
-          'Profiles of contributors working on decision support systems at the University of Huddersfield.',
+          'Profiles of contributors working on AI with Decision Support Systems at the University of Huddersfield.',
       },
       {
         '@type': 'ItemList',

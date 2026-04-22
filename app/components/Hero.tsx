@@ -14,7 +14,7 @@ export default function Hero() {
         <div className="grid items-center gap-10 lg:grid-cols-[1.1fr_0.9fr]">
           <div className="float-up">
             <h1 className="font-display text-3xl leading-tight text-[var(--ink)] sm:text-4xl md:text-5xl lg:text-7xl">
-              <span className="block">Decision Support Systems</span>
+              <span className="block">AI with Decision Support Systems</span>
               <span className="block text-[var(--brand-strong)]">in practice</span>
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-relaxed text-[var(--muted)] md:text-xl">

@@ -6,7 +6,7 @@ import { absoluteUrl } from '../lib/seo';
 export const metadata: Metadata = {
   title: 'Decision Domains',
   description:
-    'Browse domain areas where the University of Huddersfield applies decision support systems, including health care and housing strategy.',
+    'Browse domain areas where the University of Huddersfield applies AI with Decision Support Systems, including health care and housing strategy.',
   alternates: {
     canonical: '/domains',
   },

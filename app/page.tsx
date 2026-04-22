@@ -12,20 +12,20 @@ import { people } from '@/data/people';
 import { absoluteUrl } from './lib/seo';
 
 export const metadata: Metadata = {
-  title: 'Applied Decision Support Systems',
+  title: 'Applied AI with Decision Support Systems',
   description:
-    'Explore University of Huddersfield projects, outputs, and team expertise in AI-powered decision support systems across housing, health care, and emerging domains.',
+    'Explore University of Huddersfield projects, outputs, and team expertise in AI-powered AI with Decision Support Systems across housing, health care, and emerging domains.',
   alternates: {
     canonical: '/',
   },
   keywords: [
-    'decision support systems UK',
+    'AI with Decision Support Systems UK',
     'AI for decision making',
     'Huddersfield housing AI',
     'applied machine learning research',
   ],
   openGraph: {
-    title: 'Applied Decision Support Systems at the University of Huddersfield',
+    title: 'Applied AI with Decision Support Systems at the University of Huddersfield',
     description:
       'A research-led showcase of practical AI, data analysis, and decision informatics projects, outputs, and collaborations.',
     url: absoluteUrl('/'),
@@ -40,7 +40,7 @@ export default function Home() {
       {
         '@type': 'Organization',
         '@id': absoluteUrl('/#organization'),
-        name: 'University of Huddersfield Decision Support Systems',
+        name: 'University of Huddersfield AI with Decision Support Systems',
         url: absoluteUrl('/'),
         parentOrganization: {
           '@type': 'CollegeOrUniversity',
@@ -49,7 +49,7 @@ export default function Home() {
         },
         areaServed: 'United Kingdom',
         knowsAbout: [
-          'Decision support systems',
+          'AI with Decision Support Systems',
           'Machine learning',
           'Generative AI',
           'Decision informatics',
@@ -60,7 +60,7 @@ export default function Home() {
         '@type': 'WebSite',
         '@id': absoluteUrl('/#website'),
         url: absoluteUrl('/'),
-        name: 'UoH Decision Support Systems Showcase',
+        name: 'UoH AI with Decision Support Systems Showcase',
         description:
           'Explore AI-enabled decision support research, projects, outputs, and people at the University of Huddersfield.',
         publisher: {
@@ -71,7 +71,7 @@ export default function Home() {
       {
         '@type': 'ItemList',
         '@id': absoluteUrl('/#site-summary'),
-        name: 'Decision Support Systems Showcase Summary',
+        name: 'AI with Decision Support Systems Showcase Summary',
         numberOfItems: domains.length + projects.length + publications.length + people.length,
         itemListElement: [
           {

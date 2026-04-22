@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(getSiteUrl()),
   title: {
     default: SITE_NAME,
-    template: '%s | UoH Decision Support Systems',
+    template: '%s | UoH AI with Decision Support Systems',
   },
   description: SITE_DESCRIPTION,
   applicationName: SITE_SHORT_NAME,
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     canonical: '/',
   },
   keywords: [
-    'Decision support systems',
+    'AI with Decision Support Systems',
     'University of Huddersfield',
     'Applied AI research',
     'Machine learning projects',

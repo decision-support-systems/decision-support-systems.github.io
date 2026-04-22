@@ -7,7 +7,7 @@ export const projects = [
     description: "An expert‑guided digital platform that supports transparent, property‑level retrofit decision‑making by combining multi‑criteria analysis with explainable AI to rank and justify sustainable retrofit options.",
     demoUrl: "#",
     linkLabel: "View Project",
-    tags: ["Decision Support Systems", "Multi‑criteria decision analysis (MCDA)", "Explainable AI", "Building retrofitting"],
+    tags: ["AI with Decision Support Systems", "Multi‑criteria decision analysis (MCDA)", "Explainable AI", "Building retrofitting"],
     deliveryContexts: ["Retrofit option appraisal", "Stakeholder decision workshops"],
     imageLabel: "Stakeholder‑informed, explainable decision support for sustainable building retrofits",
   },

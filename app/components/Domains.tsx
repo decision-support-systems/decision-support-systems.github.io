@@ -18,7 +18,7 @@ export default function Domains({ preview = false }: DomainsProps) {
         <p className="section-kicker">Decision Domains</p>
         <h2 className="section-title">Domain Areas</h2>
         <p className="section-subtitle">
-          Explore where our decision support systems are currently applied.
+          Explore where our AI with Decision Support Systems are currently applied.
         </p>
 
         <div className="grid gap-6 sm:grid-cols-2 xl:grid-cols-3">

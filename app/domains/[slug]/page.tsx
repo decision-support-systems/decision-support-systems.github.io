@@ -43,7 +43,7 @@ export function generateMetadata({ params }: DomainPageProps): Metadata {
       'University of Huddersfield',
     ],
     openGraph: {
-      title: `${domain.title} Decision Support Systems`,
+      title: `${domain.title} AI with Decision Support Systems`,
       description: domain.shortDescription,
       url: absoluteUrl(`/domains/${domain.slug}`),
       type: 'article',

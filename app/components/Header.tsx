@@ -82,7 +82,7 @@ export default function Header() {
             <SiteLogo size={44} />
             <div>
               <p className="text-[10px] md:text-[9px] lg:text-xs font-semibold uppercase tracking-[0.14em] lg:tracking-[0.16em] whitespace-nowrap text-[var(--brand-strong)]">University of Huddersfield</p>
-              <p className="text-lg md:text-base lg:text-xl leading-tight whitespace-nowrap font-display font-semibold text-[var(--ink)]">Decision Support Systems</p>
+              <p className="text-lg md:text-base lg:text-xl leading-tight whitespace-nowrap font-display font-semibold text-[var(--ink)]">AI with Decision Support Systems</p>
             </div>
           </div>
 

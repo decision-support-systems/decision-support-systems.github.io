@@ -12,7 +12,7 @@ export default function About() {
           <div>
             <h3 className="text-2xl font-semibold mb-4 text-[var(--ink)]">What this site represents</h3>
             <p className="text-[var(--muted)] text-lg leading-relaxed mb-4">
-              This is a landing page for University of Huddersfield work on decision support systems and applied AI. It brings together domain-focused research, technical prototypes, and delivery-oriented projects with public and private sector partners.
+              This is a landing page for University of Huddersfield work on AI with Decision Support Systems and applied AI. It brings together domain-focused research, technical prototypes, and delivery-oriented projects with public and private sector partners.
             </p>
             <p className="text-[var(--muted)] text-lg leading-relaxed">
               The emphasis is practical: building models, testing generative AI, orchestrating agentic workflows, analysing operational data, and turning complex evidence into usable informatics and visualisations.

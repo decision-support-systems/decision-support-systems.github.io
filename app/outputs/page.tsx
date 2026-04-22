@@ -36,7 +36,7 @@ export default function OutputsPage() {
         url: absoluteUrl('/outputs'),
         name: 'Research Outputs',
         description:
-          'A publication and research evidence collection for University of Huddersfield decision support systems work.',
+          'A publication and research evidence collection for University of Huddersfield AI with Decision Support Systems work.',
       },
       {
         '@type': 'ItemList',
@@ -51,7 +51,7 @@ export default function OutputsPage() {
             headline: publication.title,
             description: publication.summary,
             isPartOf: publication.venue,
-            about: getDomainById(publication.domainId)?.title || 'Decision support systems',
+            about: getDomainById(publication.domainId)?.title || 'AI with Decision Support Systems',
             url: publication.link || absoluteUrl('/outputs'),
           },
         })),
