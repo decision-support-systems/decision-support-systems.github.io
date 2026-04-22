@@ -34,14 +34,14 @@ export default function ScrollCompassBackground() {
   return (
     <div className="pointer-events-none fixed inset-y-0 right-0 z-0 hidden items-center justify-end xl:flex">
       <div
-        className="relative mr-[-9rem] h-[40rem] w-[40rem] opacity-30"
+        className="relative mr-[-9rem] h-[30rem] w-[30rem] opacity-30"
         style={{ transform: `rotate(${-rotation}deg)` }}
       >
         <Image
           src="/images/logo.png"
           alt=""
           fill
-          sizes="640px"
+          sizes="500px"
           priority
           className="object-contain"
         />

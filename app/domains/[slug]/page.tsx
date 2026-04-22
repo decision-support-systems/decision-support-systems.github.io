@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
+import DomainKpis from '../../components/DomainKpis';
 import { domains, getDomainBySlug } from '@/data/domains';
 import { projects } from '@/data/projects';
 import { publications } from '@/data/publications';
@@ -59,6 +60,19 @@ export default function DomainPage({ params }: DomainPageProps) {
 
   const domainProjects = projects.filter((project) => project.domainId === domain.id);
   const domainPublications = publications.filter((publication) => publication.domainId === domain.id);
+  const activeProjectCount = domainProjects.filter((project) => project.status === 'active').length;
+  const completedProjectCount = domainProjects.filter((project) => project.status === 'completed').length;
+  const focusThemeCount = new Set([
+    ...domainProjects.flatMap((project) => project.tags),
+    ...domainPublications.flatMap((publication) => publication.focusThemes || []),
+  ]).size;
+  const deliveryFootprintCount = new Set([
+    ...domainProjects.flatMap((project) => project.deliveryContexts || []),
+    ...domainPublications.flatMap((publication) => publication.deliveryContexts || []),
+  ]).size;
+  const impactFactor = domainPublications.length
+    ? domainPublications.reduce((sum, publication) => sum + (publication.impactFactor || 0), 0) / domainPublications.length
+    : 0;
   const pageUrl = absoluteUrl(`/domains/${domain.slug}`);
 
   const schema = {
@@ -146,12 +160,14 @@ export default function DomainPage({ params }: DomainPageProps) {
           <h1 className="section-title">{domain.title}</h1>
           <p className="section-subtitle">{domain.longDescription}</p>
 
-          <div className="mb-8 rounded-2xl border border-[var(--line)] bg-[rgba(191,217,202,0.22)] p-5">
-            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[var(--brand-strong)]">At a glance</p>
-            <p className="mt-2 text-[var(--muted)] leading-relaxed">
-              This domain currently features {domainProjects.length} project{domainProjects.length === 1 ? '' : 's'} and {domainPublications.length} research output{domainPublications.length === 1 ? '' : 's'}, giving a clear view of active delivery and supporting evidence.
-            </p>
-          </div>
+          <DomainKpis
+            activeProjects={activeProjectCount}
+            completedProjects={completedProjectCount}
+            researchOutputs={domainPublications.length}
+            impactFactor={impactFactor}
+            focusThemes={focusThemeCount}
+            deliveryFootprint={deliveryFootprintCount}
+          />
 
           <div className="grid gap-8 lg:grid-cols-2">
             <div>
@@ -176,7 +192,6 @@ export default function DomainPage({ params }: DomainPageProps) {
                 <div className="space-y-4">
                   {domainPublications.map((publication) => (
                     <article key={publication.id} className="rounded-2xl border-l-4 border-[var(--brand)] bg-[var(--surface)] px-6 py-5 shadow-sm">
-                      <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[var(--brand-strong)]">{publication.type}</p>
                       <h3 className="text-lg font-semibold text-[var(--ink)] mt-2">{publication.title}</h3>
                       <p className="text-[var(--muted)] mt-2 leading-relaxed">{publication.summary}</p>
                       <p className="text-[var(--muted)] italic mt-2">{publication.venue}</p>

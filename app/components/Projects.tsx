@@ -14,6 +14,14 @@ export default function Projects({ preview = false, domainId }: ProjectsProps) {
   const filteredProjects = domainId ? projects.filter((project) => project.domainId === domainId) : projects;
   const visibleProjects = preview ? filteredProjects.slice(0, 2) : filteredProjects;
 
+  const getStatusClasses = (status: string) => {
+    if (status === 'completed') {
+      return 'bg-[rgba(191,217,202,0.92)] text-[var(--brand-strong)]';
+    }
+
+    return 'bg-[rgba(230,198,128,0.88)] text-[var(--ink)]';
+  };
+
   return (
     <section id="projects" className="py-14 md:py-16">
       <div className="container-custom">
@@ -34,7 +42,12 @@ export default function Projects({ preview = false, domainId }: ProjectsProps) {
               </div>
 
               <div className="p-6">
-                <h3 className="text-xl font-bold text-[var(--ink)] mb-2">{project.title}</h3>
+                <div className="mb-2 flex items-start justify-between gap-4">
+                  <h3 className="text-xl font-bold text-[var(--ink)]">{project.title}</h3>
+                  <span className={`shrink-0 rounded-full px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.14em] ${getStatusClasses(project.status)}`}>
+                    {project.status || 'active'}
+                  </span>
+                </div>
                 <p className="text-[var(--muted)] mb-4 leading-relaxed">{project.description}</p>
 
                 <p className="mb-4 text-xs font-semibold uppercase tracking-[0.16em] text-[var(--brand-strong)]">

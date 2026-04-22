@@ -14,6 +14,32 @@ export default function Publications({ preview = false, domainId }: Publications
   const filteredPublications = domainId ? publications.filter((publication) => publication.domainId === domainId) : publications;
   const visiblePublications = preview ? filteredPublications.slice(0, 2) : filteredPublications;
 
+  const getImpactFactorStyles = (impactFactor: number) => {
+    const safeImpactFactor = Math.max(0, Math.min(10, impactFactor || 0));
+
+    if (safeImpactFactor >= 7) {
+      return {
+        ring: 'border-[rgba(95,115,134,0.24)]',
+        text: 'text-[var(--brand-strong)]',
+        background: 'bg-[rgba(191,217,202,0.7)]',
+      };
+    }
+
+    if (safeImpactFactor >= 4) {
+      return {
+        ring: 'border-[rgba(230,198,128,0.28)]',
+        text: 'text-[var(--ink)]',
+        background: 'bg-[rgba(230,198,128,0.62)]',
+      };
+    }
+
+    return {
+      ring: 'border-[rgba(231,205,213,0.35)]',
+      text: 'text-[var(--brand-strong)]',
+      background: 'bg-[rgba(231,205,213,0.62)]',
+    };
+  };
+
   return (
     <section id="outputs" className="py-14 md:py-16 bg-[rgba(182,213,222,0.18)]">
       <div className="container-custom">
@@ -29,7 +55,6 @@ export default function Publications({ preview = false, domainId }: Publications
               key={pub.id}
               className="rounded-2xl border-l-4 border-[var(--brand)] bg-[var(--surface)] px-6 py-5 shadow-sm transition-shadow hover:shadow-md"
             >
-              <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[var(--brand-strong)]">{pub.type}</p>
               <h3 className="text-lg font-semibold text-[var(--ink)] mt-2">{pub.title}</h3>
               {/* <p className="text-[#4c5f66] mt-2">
                 <span className="font-medium">{pub.authors}</span>
