@@ -1,10 +1,10 @@
-# University of Housing and AI - Website
+# AI with Decision Support Systems - Website
 
-Official website for the University of Housing and AI research group.
+Official website for the University of Huddersfield AI with Decision Support Systems hub.
 
 ## About
 
-This website showcases our research combining artificial intelligence, machine learning, and economic analysis to advance understanding of housing markets and inform policy decisions.
+This website showcases domain-focused research and implementation work across artificial intelligence, machine learning, generative AI, analytics, and decision support systems.
 
 ## Features
 
@@ -67,8 +67,9 @@ For GitHub Actions setup, see [SETUP.md](SETUP.md#github-actions-recommended)
 
 ## Related Resources
 
-- **Main Repository**: https://github.com/uoh-housing-and-ai
+- **Main Repository**: https://github.com/decision-support-systems
 - **Setup Guide**: See [SETUP.md](SETUP.md)
 - **Next.js Docs**: https://nextjs.org/docs
 - **Tailwind CSS Docs**: https://tailwindcss.com/docs
-Public-facing organisation site showcasing University of Huddersfield projects at the intersection of housing research and artificial intelligence.
+
+Public-facing organisation site showcasing University of Huddersfield projects developed through the AI with Decision Support Systems hub.
